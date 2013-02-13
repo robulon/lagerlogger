@@ -20,6 +20,7 @@ public class BeerDBHelper extends SQLiteOpenHelper {
 	
 	private static final String DATABASE_NAME = "beer.db";
 	private static final int DATABASE_VERSION = 1;
+	private static final int GIT_TEST = 1;
 	
 	private static final String DATABASE_CREATE = "create table "
 		      + TABLE_BEER + "(" + COLUMN_ID
