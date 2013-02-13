@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
-public class MainListActivity extends Activity {
+public class BeerViewer extends Activity {
 	private static final String BEER_TO_EDIT = "beer";
 	private static final String BREWERY_TO_EDIT = "brewery";
 	private String name = "East India Pale Ale";
@@ -25,7 +25,7 @@ public class MainListActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		beer = new Beer(name, brewery, color, type, note, abv, og, fg);
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main_list);
+		setContentView(R.layout.activity_beer_viewer);
 		showBeerInfo(beer);
 	}
 
