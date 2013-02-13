@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="editBeerEntry"
-            android:text="Edit Entry" />
+            android:text="@string/button_edit" />
 
         <Button
             android:id="@+id/buttonNewFromEntry"
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="addBeerEntry"
-            android:text="Add Entry" />
+            android:text="@string/button_add" />
 
     </LinearLayout>
 

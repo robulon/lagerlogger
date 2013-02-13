@@ -1,13 +1,12 @@
 package com.example.lagerlogger;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.style.UpdateLayout;
-import android.util.Log;
 import android.widget.EditText;
 
-public class BeerEditor extends Activity{
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+public class BeerEditor extends SherlockFragmentActivity {
 	private static final String BEER_TO_EDIT = "beer";
 	private static final String BREWERY_TO_EDIT = "brewery";
 	

@@ -1,13 +1,14 @@
 package com.example.lagerlogger;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
-public class BeerViewer extends Activity {
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+public class BeerViewer extends SherlockFragmentActivity {
 	private static final String BEER_TO_EDIT = "beer";
 	private static final String BREWERY_TO_EDIT = "brewery";
 	private String name = "East India Pale Ale";
@@ -27,13 +28,6 @@ public class BeerViewer extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_beer_viewer);
 		showBeerInfo(beer);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main_list, menu);
-		return true;
 	}
 	
 	public void setTextViewText (String string, TextView tv){

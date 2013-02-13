@@ -14,5 +14,7 @@
     <string name="beer_abv_hint">ABV %</string>
     <string name="beer_og_hint">O.G.</string>
     <string name="beer_notes_hint">Notes</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_add">Add Entry</string>
 
 </resources>
