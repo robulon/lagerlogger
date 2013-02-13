@@ -965,9 +965,11 @@ containing a value of this type.
         public static final int abs__title=0x7f04001b;
         public static final int abs__titleDivider=0x7f04001c;
         public static final int abs__up=0x7f04000b;
+        public static final int button1=0x7f040042;
+        public static final int button2=0x7f040043;
         public static final int buttonCancelEdit=0x7f04003f;
-        public static final int buttonEdit=0x7f040046;
-        public static final int buttonNewFromEntry=0x7f040047;
+        public static final int buttonEdit=0x7f04004a;
+        public static final int buttonNewFromEntry=0x7f04004b;
         public static final int buttonSaveEdit=0x7f04003e;
         public static final int disableHome=0x7f040009;
         public static final int editTextABV=0x7f04003a;
@@ -980,7 +982,9 @@ containing a value of this type.
         public static final int edit_query=0x7f040027;
         public static final int homeAsUp=0x7f040006;
         public static final int listMode=0x7f040002;
-        public static final int menu_settings=0x7f040048;
+        public static final int listView1=0x7f040041;
+        public static final int list_layout=0x7f040040;
+        public static final int menu_settings=0x7f04004c;
         public static final int normal=0x7f040001;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
@@ -989,12 +993,12 @@ containing a value of this type.
         public static final int tableLayout=0x7f040033;
         public static final int tableRow1=0x7f040039;
         public static final int tableRow2=0x7f040036;
-        public static final int textViewABV=0x7f040043;
-        public static final int textViewBrewery=0x7f040041;
-        public static final int textViewColorType=0x7f040042;
-        public static final int textViewName=0x7f040040;
-        public static final int textViewNote=0x7f040045;
-        public static final int textViewOG=0x7f040044;
+        public static final int textViewABV=0x7f040047;
+        public static final int textViewBrewery=0x7f040045;
+        public static final int textViewColorType=0x7f040046;
+        public static final int textViewName=0x7f040044;
+        public static final int textViewNote=0x7f040049;
+        public static final int textViewOG=0x7f040048;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -1026,9 +1030,10 @@ containing a value of this type.
         public static final int abs__search_view=0x7f030015;
         public static final int abs__simple_dropdown_hint=0x7f030016;
         public static final int activity_beer_edit=0x7f030017;
-        public static final int activity_beer_viewer=0x7f030018;
-        public static final int sherlock_spinner_dropdown_item=0x7f030019;
-        public static final int sherlock_spinner_item=0x7f03001a;
+        public static final int activity_beer_list=0x7f030018;
+        public static final int activity_beer_viewer=0x7f030019;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001a;
+        public static final int sherlock_spinner_item=0x7f03001b;
     }
     public static final class menu {
         public static final int activity_main_list=0x7f0b0000;
@@ -1080,8 +1085,18 @@ containing a value of this type.
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
         public static final int app_name=0x7f09000f;
+        public static final int beer_abv_hint=0x7f090019;
+        public static final int beer_brewery_hint=0x7f090016;
+        public static final int beer_color_hint=0x7f090017;
+        public static final int beer_name_hint=0x7f090015;
+        public static final int beer_notes_hint=0x7f09001b;
+        public static final int beer_og_hint=0x7f09001a;
+        public static final int beer_type_hint=0x7f090018;
+        public static final int cancel_button=0x7f090014;
         public static final int hello_world=0x7f090010;
         public static final int menu_settings=0x7f090011;
+        public static final int save=0x7f090012;
+        public static final int save_button=0x7f090013;
     }
     public static final class style {
         /** 
