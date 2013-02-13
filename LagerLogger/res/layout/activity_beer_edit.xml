@@ -1,0 +1,109 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Beer Name"
+        android:inputType="text"
+        android:textSize="@dimen/xLarge"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <EditText
+        android:id="@+id/editTextBrewery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:gravity="right"
+        android:hint="Brewery"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/medsmall" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextColor"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Color"
+            android:paddingTop="10dp" />
+
+        <EditText
+            android:id="@+id/editTextType"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type"
+            android:paddingTop="10dp" >
+
+            <requestFocus />
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp" >
+
+        <EditText
+            android:id="@+id/editTextABV"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="ABV %"
+            android:paddingLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editTextOG"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="7"
+            android:gravity="right"
+            android:hint="O.G.: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </TableRow>
+
+    <EditText
+        android:id="@+id/editTextNote"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="top|left"
+        android:hint="Notes"
+        android:minLines="10"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/medsmall" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/buttonSaveEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/buttonCancelEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</TableLayout>

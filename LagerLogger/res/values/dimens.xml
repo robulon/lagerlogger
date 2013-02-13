@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small">10dp</dimen>
+    <dimen name="medsmall">13dp</dimen>
+    <dimen name="large">25dp</dimen>
+    <dimen name="xLarge">35dp</dimen>
+</resources>
