@@ -7,31 +7,30 @@ import android.widget.TextView;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
+
 public class BeerViewer extends SherlockFragmentActivity {
 	private static final String BEER_TO_EDIT = "beer";
 	private static final String BREWERY_TO_EDIT = "brewery";
-	private String name = "East India Pale Ale";
-	private String brewery = "Brooklyn Brewery";
-	private String color = "Amber" ;
-	private String type = "India Pale Ale" ;
-	private String note = "notes go here";
+
 	
-	private double abv = 5.9;
-	private double og = 1.060;
-	private double fg = 1.010;
-	private Beer beer = null;
+	private Long mRowId;
+	private Beer mBeer = null;
+	
+	private BeerDbAdapter mBeerDbAdapter; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		beer = new Beer(name, brewery, color, type, note, abv, og, fg);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_beer_viewer);
-		showBeerInfo(beer);
-	}
-	
-	public void setTextViewText (String string, TextView tv){
-		CharSequence cs = string.subSequence(0, string.length());
-		tv.setText(cs);
+		
+		mRowId = (savedInstanceState == null) ? null : (Long) savedInstanceState.getSerializable(BeerDbAdapter.COLUMN_ID);
+		if (mRowId == null) {
+			Bundle extras = getIntent().getExtras();
+			mRowId = extras != null ? extras.getLong(BeerDbAdapter.COLUMN_ID): null;
+		}
+		
+		mBeer = new Beer(mBeerDbAdapter.findBeerByID(mRowId));
+		showBeerInfo(mBeer);
 	}
 	
 	public void showBeerInfo (Beer beer){
@@ -51,7 +50,7 @@ public class BeerViewer extends SherlockFragmentActivity {
 	
 	public void editBeerEntry(View view){
 		Intent i = new Intent(this, BeerEditor.class);
-		i.putExtra(BEER_TO_EDIT, beer);
+		i.putExtra(BeerDbAdapter.COLUMN_ID, mBeer.getID());
 		startActivity(i);
 	}
 

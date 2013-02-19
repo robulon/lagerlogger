@@ -21,7 +21,10 @@ public class BeerEditor extends SherlockFragmentActivity {
 			beer = (Beer)(i.getExtras().getParcelable(BEER_TO_EDIT));
 			setContentView(R.layout.activity_beer_edit);
 			showBeerInfo();
-		} else {setContentView(R.layout.activity_beer_edit);}
+		} else {
+			beer = new Beer();
+			setContentView(R.layout.activity_beer_edit);
+		}
 	}
 	
 	public void showBeerInfo (){
