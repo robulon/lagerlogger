@@ -10,8 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockListActivity;
-import com.android.demo.notepad3.NotesDbAdapter;
-import com.android.demo.notepad3.R;
+
 
 public class BeerList extends SherlockListActivity {
 	
