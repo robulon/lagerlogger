@@ -1,49 +1,64 @@
 package com.example.lagerlogger;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Beer implements Parcelable{
 
-	private String name, brewery, color, type, note;
-	private double abv, og, fg;
-	private long ID;
+	private String mName, mBrewery, mColor, mType, mNote;
+	private double mAbv, mOg, mFg;
+	private long mRowId;
 	
 	public Beer(){
-		name = "beer_name";
-		brewery = "brewery_name";
-		color = "beer_color";
-		type = "beer_type";
-		note = "beer_notes";
+		mName = "beer_name";
+		mBrewery = "brewery_name";
+		mColor = "beer_color";
+		mType = "beer_type";
+		mNote = "beer_notes";
 		 
-		abv = 0.0;
-		og = 1.000;
-		fg = 1.000;
+		mAbv = 0.0;
+		mOg = 1.000;
+		mFg = 1.000;
 	}
 	public Beer(String name, String brewery, String color, String type,
 			String note, double abv, double og, double fg) {
-		this.name = name;
-		this.brewery = brewery;
-		this.color = color;
-		this.type = type;
-		this.note = note;
+		this.mName = name;
+		this.mBrewery = brewery;
+		this.mColor = color;
+		this.mType = type;
+		this.mNote = note;
 
-		this.abv = abv;
-		this.og = og;
-		this.fg = fg;
+		this.mAbv = abv;
+		this.mOg = og;
+		this.mFg = fg;
 	}
 	
 	public Beer(Parcel in){
-		this.name = (String)in.readString();
-		this.brewery = (String)in.readString();
-		this.color = (String)in.readString();
-		this.type = (String)in.readString();
-		this.note = (String)in.readString();
+		this.mName = (String)in.readString();
+		this.mBrewery = (String)in.readString();
+		this.mColor = (String)in.readString();
+		this.mType = (String)in.readString();
+		this.mNote = (String)in.readString();
 		
-		this.abv = (double)in.readDouble();
-		this.og = (double)in.readDouble();
-		this.fg = (double)in.readDouble();
+		this.mAbv = (double)in.readDouble();
+		this.mOg = (double)in.readDouble();
+		this.mFg = (double)in.readDouble();
+	}
+	
+	public Beer(Cursor in){
+		this.mRowId = in.getLong(in.getColumnIndex(BeerDBHelper.COLUMN_ID));
+		
+		this.mName = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_NAME));
+		this.mBrewery = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_BREWERY));
+		this.mColor = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_COLOR));
+		this.mType = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_TYPE));
+		this.mNote = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_NOTE));
+		
+		this.mAbv = in.getFloat(in.getColumnIndex(BeerDBHelper.COLUMN_ABV));
+		this.mOg = in.getFloat(in.getColumnIndex(BeerDBHelper.COLUMN_OG));
+		this.mFg = in.getFloat(in.getColumnIndex(BeerDBHelper.COLUMN_FG));
 	}
 	
 	@Override
@@ -53,93 +68,93 @@ public class Beer implements Parcelable{
 	
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeString(name);
-		dest.writeString(brewery);
-		dest.writeString(color);
-		dest.writeString(type);
-		dest.writeString(note);
+		dest.writeString(mName);
+		dest.writeString(mBrewery);
+		dest.writeString(mColor);
+		dest.writeString(mType);
+		dest.writeString(mNote);
 		
-		dest.writeDouble(abv);
-		dest.writeDouble(og);
-		dest.writeDouble(fg);
+		dest.writeDouble(mAbv);
+		dest.writeDouble(mOg);
+		dest.writeDouble(mFg);
 	}
 	
 	public ContentValues writeCVStub (){
 		ContentValues cv = new ContentValues();
-		cv.put(BeerDBHelper.COLUMN_NAME, name);
+		cv.put(BeerDBHelper.COLUMN_NAME, mName);
 		
 		return cv;
 	}
 	
 	public String getName (){
-		return this.name;
+		return this.mName;
 	}
 	
 	public String getBrewery (){
-		return this.brewery;
+		return this.mBrewery;
 	}
 	
 	public String getColor (){
-		return this.color;
+		return this.mColor;
 	}
 	
 	public String getType (){
-		return this.type;
+		return this.mType;
 	}
 	
 	public String getNote (){
-		return this.note;
+		return this.mNote;
 	}
 	
 	public Double getABV (){
-		return this.abv;
+		return this.mAbv;
 	}
 	
 	public Double getOG (){
-		return this.og;
+		return this.mOg;
 	}
 	
 	public Double getFG (){
-		return this.fg;
+		return this.mFg;
 	}
 	
 	public long getID(){
-		return this.ID;
+		return this.mRowId;
 	}
 	public void setName (String name){
-		this.name = name;
+		this.mName = name;
 	}
 	
 	public void setBrewery (String brewery){
-		this.brewery = brewery;
+		this.mBrewery = brewery;
 	}
 	
 	public void setColor (String color){
-		this.color = color;
+		this.mColor = color;
 	}
 	
 	public void setType (String type) {
-		this.type = type;
+		this.mType = type;
 	}
 	
 	public void setNote (String note){
-		this.note = note;
+		this.mNote = note;
 	}
 	
 	public void setABV (double abv){
-		this.abv = abv;
+		this.mAbv = abv;
 	}
 	
 	public void setOG (double og){
-		this.og = og;
+		this.mOg = og;
 	}
 	
 	public void setFG (double fg){
-		this.fg = fg;
+		this.mFg = fg;
 	}
 	
 	public void setID (long ID){
-		this.ID = ID;
+		this.mRowId = ID;
 	}
 	public static final Parcelable.Creator<Beer> CREATOR = new Parcelable.Creator<Beer>() {
 		public Beer createFromParcel(Parcel in) {
