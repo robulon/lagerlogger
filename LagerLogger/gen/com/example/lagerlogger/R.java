@@ -979,10 +979,8 @@ containing a value of this type.
         public static final int editTextType=0x7f040038;
         public static final int edit_query=0x7f040027;
         public static final int homeAsUp=0x7f040006;
-        public static final int list=0x7f040041;
         public static final int listMode=0x7f040002;
         public static final int list_layout=0x7f040040;
-        public static final int menu_settings=0x7f04004b;
         public static final int normal=0x7f040001;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
@@ -998,6 +996,7 @@ containing a value of this type.
         public static final int textViewNote=0x7f040047;
         public static final int textViewOG=0x7f040046;
         public static final int textView_beerItem=0x7f04004a;
+        public static final int textView_emptyList=0x7f040041;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -1034,9 +1033,6 @@ containing a value of this type.
         public static final int beer_list_item=0x7f03001a;
         public static final int sherlock_spinner_dropdown_item=0x7f03001b;
         public static final int sherlock_spinner_item=0x7f03001c;
-    }
-    public static final class menu {
-        public static final int activity_main_list=0x7f0b0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1085,20 +1081,21 @@ containing a value of this type.
          */
         public static final int abs__shareactionprovider_share_with_application=0x7f090009;
         public static final int app_name=0x7f09000f;
-        public static final int beer_abv_hint=0x7f090019;
-        public static final int beer_brewery_hint=0x7f090016;
-        public static final int beer_color_hint=0x7f090017;
-        public static final int beer_name_hint=0x7f090015;
-        public static final int beer_notes_hint=0x7f09001b;
-        public static final int beer_og_hint=0x7f09001a;
-        public static final int beer_type_hint=0x7f090018;
-        public static final int button_add=0x7f09001d;
-        public static final int button_edit=0x7f09001c;
-        public static final int cancel_button=0x7f090014;
-        public static final int hello_world=0x7f090010;
-        public static final int menu_settings=0x7f090011;
-        public static final int save=0x7f090012;
-        public static final int save_button=0x7f090013;
+        public static final int beer_abv_hint=0x7f090010;
+        public static final int beer_brewery_hint=0x7f090011;
+        public static final int beer_color_hint=0x7f090012;
+        public static final int beer_name_hint=0x7f090013;
+        public static final int beer_notes_hint=0x7f090014;
+        public static final int beer_og_hint=0x7f090015;
+        public static final int beer_type_hint=0x7f090016;
+        public static final int button_add=0x7f090018;
+        public static final int button_edit=0x7f090017;
+        public static final int cancel_button=0x7f090019;
+        public static final int ctxt_delete_beer=0x7f09001e;
+        public static final int list_empty=0x7f09001a;
+        public static final int menu_add_beer=0x7f09001d;
+        public static final int save=0x7f09001b;
+        public static final int save_button=0x7f09001c;
     }
     public static final class style {
         /** 

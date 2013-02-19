@@ -2,19 +2,21 @@
 <resources>
 
     <string name="app_name">LagerLogger</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
-    <string name="save">Save</string>
+    <string name="beer_abv_hint">ABV %</string><string name="beer_brewery_hint">Brewery</string><string name="beer_color_hint">Color</string><string name="beer_name_hint">Beer Name</string><string name="beer_notes_hint">Notes</string><string name="beer_og_hint">O.G.</string><string name="beer_type_hint">Type</string><string name="button_edit">Edit</string><string name="button_add">Add Entry</string><string name="cancel_button">Canel</string>
+    <string name="list_empty">No beers yet, get drinkin\'\!</string><string name="save">Save</string>
     <string name="save_button">Save</string>
-    <string name="cancel_button">Canel</string>
-    <string name="beer_name_hint">Beer Name</string>
-    <string name="beer_brewery_hint">Brewery</string>
-    <string name="beer_color_hint">Color</string>
-    <string name="beer_type_hint">Type</string>
-    <string name="beer_abv_hint">ABV %</string>
-    <string name="beer_og_hint">O.G.</string>
-    <string name="beer_notes_hint">Notes</string>
-    <string name="button_edit">Edit</string>
-    <string name="button_add">Add Entry</string>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <string name="menu_add_beer">Add Beer</string>
+    <string name="ctxt_delete_beer">Delete</string>
 
 </resources>

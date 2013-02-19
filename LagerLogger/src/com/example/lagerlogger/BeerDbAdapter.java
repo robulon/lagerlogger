@@ -110,4 +110,7 @@ public static final String TABLE_BEER = "Beer_Table";
 		return mBeerDb.update(TABLE_BEER, cv, COLUMN_ID + "=" + beer.getID(),null) > 0;
 	}
 	
+	public boolean deleteNote(long rowId) {
+        return mBeerDb.delete(TABLE_BEER, COLUMN_ID + "=" + rowId, null) > 0;
+    }
 }
