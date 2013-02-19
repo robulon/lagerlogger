@@ -12,7 +12,7 @@ import android.util.Log;
 
 public class BeerDbAdapter {
 
-public static final String TABLE_BEER = "Beer Table";
+public static final String TABLE_BEER = "Beer_Table";
 	//Database Columns
 	public static final String COLUMN_ID = "_id";
 	public static final String COLUMN_NAME = "name";

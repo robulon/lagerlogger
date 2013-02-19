@@ -979,8 +979,8 @@ containing a value of this type.
         public static final int editTextType=0x7f040038;
         public static final int edit_query=0x7f040027;
         public static final int homeAsUp=0x7f040006;
+        public static final int list=0x7f040041;
         public static final int listMode=0x7f040002;
-        public static final int listViewBeer=0x7f040041;
         public static final int list_layout=0x7f040040;
         public static final int menu_settings=0x7f04004b;
         public static final int normal=0x7f040001;
