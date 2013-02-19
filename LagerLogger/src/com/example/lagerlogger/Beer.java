@@ -48,17 +48,17 @@ public class Beer implements Parcelable{
 	}
 	
 	public Beer(Cursor in){
-		this.mRowId = in.getLong(in.getColumnIndex(BeerDBHelper.COLUMN_ID));
+		this.mRowId = in.getLong(in.getColumnIndex(BeerDbAdapter.COLUMN_ID));
 		
-		this.mName = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_NAME));
-		this.mBrewery = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_BREWERY));
-		this.mColor = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_COLOR));
-		this.mType = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_TYPE));
-		this.mNote = in.getString(in.getColumnIndex(BeerDBHelper.COLUMN_NOTE));
+		this.mName = in.getString(in.getColumnIndex(BeerDbAdapter.COLUMN_NAME));
+		this.mBrewery = in.getString(in.getColumnIndex(BeerDbAdapter.COLUMN_BREWERY));
+		this.mColor = in.getString(in.getColumnIndex(BeerDbAdapter.COLUMN_COLOR));
+		this.mType = in.getString(in.getColumnIndex(BeerDbAdapter.COLUMN_TYPE));
+		this.mNote = in.getString(in.getColumnIndex(BeerDbAdapter.COLUMN_NOTE));
 		
-		this.mAbv = in.getFloat(in.getColumnIndex(BeerDBHelper.COLUMN_ABV));
-		this.mOg = in.getFloat(in.getColumnIndex(BeerDBHelper.COLUMN_OG));
-		this.mFg = in.getFloat(in.getColumnIndex(BeerDBHelper.COLUMN_FG));
+		this.mAbv = in.getFloat(in.getColumnIndex(BeerDbAdapter.COLUMN_ABV));
+		this.mOg = in.getFloat(in.getColumnIndex(BeerDbAdapter.COLUMN_OG));
+		this.mFg = in.getFloat(in.getColumnIndex(BeerDbAdapter.COLUMN_FG));
 	}
 	
 	@Override
@@ -79,9 +79,17 @@ public class Beer implements Parcelable{
 		dest.writeDouble(mFg);
 	}
 	
-	public ContentValues writeCVStub (){
+	public ContentValues writeCV (){
 		ContentValues cv = new ContentValues();
-		cv.put(BeerDBHelper.COLUMN_NAME, mName);
+		
+		cv.put(BeerDbAdapter.COLUMN_NAME, mName);
+		cv.put(BeerDbAdapter.COLUMN_BREWERY, mBrewery);
+		cv.put(BeerDbAdapter.COLUMN_COLOR, mColor);
+		cv.put(BeerDbAdapter.COLUMN_TYPE, mType);
+		cv.put(BeerDbAdapter.COLUMN_NOTE, mNote);
+		cv.put(BeerDbAdapter.COLUMN_ABV, mAbv);
+		cv.put(BeerDbAdapter.COLUMN_OG, mOg);
+		cv.put(BeerDbAdapter.COLUMN_FG, mFg);
 		
 		return cv;
 	}
