@@ -982,7 +982,7 @@ containing a value of this type.
         public static final int listMode=0x7f040002;
         public static final int listViewBeer=0x7f040041;
         public static final int list_layout=0x7f040040;
-        public static final int menu_settings=0x7f04004a;
+        public static final int menu_settings=0x7f04004b;
         public static final int normal=0x7f040001;
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
@@ -997,6 +997,7 @@ containing a value of this type.
         public static final int textViewName=0x7f040042;
         public static final int textViewNote=0x7f040047;
         public static final int textViewOG=0x7f040046;
+        public static final int textView_beerItem=0x7f04004a;
         public static final int useLogo=0x7f040004;
         public static final int wrap_content=0x7f040000;
     }
@@ -1030,8 +1031,9 @@ containing a value of this type.
         public static final int activity_beer_edit=0x7f030017;
         public static final int activity_beer_list=0x7f030018;
         public static final int activity_beer_viewer=0x7f030019;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001a;
-        public static final int sherlock_spinner_item=0x7f03001b;
+        public static final int beer_list_item=0x7f03001a;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001b;
+        public static final int sherlock_spinner_item=0x7f03001c;
     }
     public static final class menu {
         public static final int activity_main_list=0x7f0b0000;
