@@ -43,4 +43,6 @@ public class BeerEditor extends SherlockFragmentActivity {
 		et = (EditText)findViewById(R.id.editTextNote);
 		et.setText(beer.getNote());
 	}
+	
+	
 }

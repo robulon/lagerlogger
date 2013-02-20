@@ -85,12 +85,6 @@ public static final String TABLE_BEER = "Beer_Table";
 		mBeerDb.close();
 	}
 	
-	public void addBeer(Beer beer){
-		ContentValues cv = new ContentValues(beer.writeCV());
-		long insertID = mBeerDb.insert(TABLE_BEER, null, cv);
-		beer.setID(insertID);
-	}
-	
 	public Cursor findBeerByID(long ID) {
 		Cursor csr = mBeerDb.query(TABLE_BEER, ALL_COLUMNS, COLUMN_ID + " = "
 				+ ID, null, null, null, null);
@@ -103,6 +97,12 @@ public static final String TABLE_BEER = "Beer_Table";
 	public Cursor getBeerList() {
 		return mBeerDb.query(TABLE_BEER, new String[] {COLUMN_ID, COLUMN_NAME}, 
 				null, null, null, null, null);
+	}
+	
+	public void addBeer(Beer beer){
+		ContentValues cv = new ContentValues(beer.writeCV());
+		long insertID = mBeerDb.insert(TABLE_BEER, null, cv);
+		beer.setID(insertID);
 	}
 	
 	public boolean updateBeer(Beer beer) {

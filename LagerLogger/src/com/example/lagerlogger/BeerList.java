@@ -32,9 +32,11 @@ public class BeerList extends SherlockListActivity {
 	
 	private static final int INSERT_ID = Menu.FIRST;
 	private static final int DELETE_ID = Menu.FIRST + 1;
+	private static final int EDIT_ID = Menu.FIRST + 2;
 	
 	private static final int ACTIVITY_ADD_BEER = 0;
 	private static final int ACTIVITY_EDIT_BEER = 1;
+	
 	
 	private BeerDbAdapter mBeerDbAdapter;
 	
@@ -81,6 +83,7 @@ public class BeerList extends SherlockListActivity {
 			ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
 		menu.add(0, DELETE_ID, 0, R.string.ctxt_delete_beer);
+		menu.add(0, EDIT_ID, 0,  R.string.ctxt_edit_beer);
 	}
 	
 	@Override
@@ -92,6 +95,12 @@ public class BeerList extends SherlockListActivity {
 			mBeerDbAdapter.deleteNote(info.id);
 			fillListData();
 			return true;
+		case EDIT_ID:
+			info = (AdapterContextMenuInfo) item.getMenuInfo();
+			Intent i = new Intent(this, BeerEditor.class);
+			i.putExtra(BeerDbAdapter.COLUMN_ID, info.id);
+			startActivityForResult(i, ACTIVITY_EDIT_BEER);
+			
 		}
 		return super.onContextItemSelected((android.view.MenuItem) item);
 	}

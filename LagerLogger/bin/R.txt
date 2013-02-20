@@ -379,6 +379,7 @@ int string button_add 0x7f090018
 int string button_edit 0x7f090017
 int string cancel_button 0x7f090019
 int string ctxt_delete_beer 0x7f09001e
+int string ctxt_edit_beer 0x7f09001f
 int string list_empty 0x7f09001a
 int string menu_add_beer 0x7f09001d
 int string save 0x7f09001b

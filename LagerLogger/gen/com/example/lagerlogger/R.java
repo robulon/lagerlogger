@@ -1092,6 +1092,7 @@ containing a value of this type.
         public static final int button_edit=0x7f090017;
         public static final int cancel_button=0x7f090019;
         public static final int ctxt_delete_beer=0x7f09001e;
+        public static final int ctxt_edit_beer=0x7f09001f;
         public static final int list_empty=0x7f09001a;
         public static final int menu_add_beer=0x7f09001d;
         public static final int save=0x7f09001b;
